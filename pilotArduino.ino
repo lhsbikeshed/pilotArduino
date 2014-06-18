@@ -55,7 +55,7 @@ struct PlugState {
 } 
 plugState[6];
 int sockets[] = {  
-  2, 3, 6, 11, 8, 13};    
+  2, 3, 6, 11, 14, 13};    
 int plugs[] = { 
   4, 5, 7, 9, 10, 12};
 int currentSocket = 0;

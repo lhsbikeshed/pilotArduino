@@ -45,7 +45,7 @@ byte jumpLEDOn = 0;
 byte lastButtonState = LOW;
 
 int switchPinMap[] = {
-  37,39,41,43,45};
+  39,37,41,43,45};
 
 //------------- plug stuff
 struct PlugState {

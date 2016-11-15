@@ -1,27 +1,27 @@
 /*
 centre console
- 
+
  top row 7 9
  bot row 8 6
- 
- 
+
+
  floppy box
  10
  13
- 
- 
+
+
  above eng:
  5  2
- 
- 
+
+
  above door
- 
+
  12
  11
- 
- 
+
+
  tect
- 
+
  3
  4
  */
@@ -52,11 +52,11 @@ struct PlugState {
   int plug;
   int socket;
   boolean con;
-} 
+}
 plugState[6];
-int sockets[] = {  
-  2, 3, 6, 11, 14, 13};    
-int plugs[] = { 
+int sockets[] = {
+  2, 3, 6, 11, 14, 13};
+int plugs[] = {
   4, 5, 7, 9, 10, 12};
 int currentSocket = 0;
 
@@ -69,7 +69,7 @@ void setup(){
     digitalWrite(switchPinMap[i], HIGH);
     if(digitalRead(switchPinMap[i])){
       lastSwitchStates[i] = true;
-    } 
+    }
     else {
       lastSwitchStates[i] = false;
     }
@@ -107,7 +107,7 @@ void loop(){
       jumpBlinking = false;
       digitalWrite(JUMPLED,LOW);
       jumpLEDOn = LOW;
-    } 
+    }
     else if(c == 'B') {
       jumpBlinking = true;
       digitalWrite(JUMPLED,LOW);
@@ -164,12 +164,12 @@ void loop(){
 
 
   readCables();
-  
+
 
 }
 
 void readCables(){
-  
+
   for (int plugId = 0; plugId < 6; plugId++){
 
 
@@ -210,7 +210,7 @@ void readCables(){
   for(int sl = 0; sl < 6; sl++){
     if(sl != currentSocket){
       digitalWrite(sockets[sl], HIGH);
-    } 
+    }
     else {
       digitalWrite(sockets[sl], LOW);
     }
